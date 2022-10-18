@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="my_mesh">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.225 0.225 0.225</scale>
+            <uri>model://testing_area/meshes/testing_area.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <scale>0.225 0.225 0.225</scale>
+              <uri>model://testing_area/meshes/testing_area.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
